@@ -209,7 +209,7 @@ AIC: 1219.3
 Number of Fisher Scoring iterations: 7
 We observed that age and average glucose level is significant. What can interpret from these findings as follows; As age increase and glucose level increase and likely to have high risk of stroke We can now observe our stroke_model aginst the test values fitted.results <- predict(model, newdata= health_test, type = 'response') fitted.results <- ifelse(fitted.results > 0.5, 1, 0) difPred <- fitted.results != health_test$stroke misClasError <- mean(fitted.results != health_test$stroke) print(paste("Accuracy", 1 - misClasError))
 
-[1] "Accuracy 0"
+[1] "Accuracy 95"
 The accuracy of our model in predicting stroke is 95% accuracy which indicate that the model performed well. Now we can plot the Receiver Operatin Curve and calculate the area under the cure library(ROCR) p <- predict(model,newdata = health_test, type = 'response') pr <- prediction(p, health_test$stroke) prf <- performance(pr, measure = "tpr", x.measure = "fpr") plot(prf)
 
 auc <- performance(pr, measure = "auc") print(auc@y.values)

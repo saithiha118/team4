@@ -1,3 +1,3 @@
+[team_project_502_Rcode.docx](https://github.com/saithiha118/team4/files/6348271/team_project_502_Rcode.docx)
 
-library('cluster') library('dendextend') library('factoextra') library(ggvis) library("ggdendro") library("infotheo") library("dplyr") library("rms") library(tidyverse) library(DataExplorer) library(ggplot2) library(plyr) library(magrittr) library(patchwork) setwd("C:/Users/sheri/Desktop") df<-read.csv("healthcare-dataset-stroke-data.csv") nrow(df)
 
